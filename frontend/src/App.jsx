@@ -20,7 +20,7 @@ function App() {
   let [newChat, setNewChat] = useState(true); // store new chat
   let [theme, setTheme] = useState("dark"); // for changing theme
 
-  let [sidebar, setSidebar] = useState(true);
+  let [sidebar, setSidebar] = useState(false);
 
   const [isLoggedin, setIsLoggedin] = useState(!!localStorage.getItem("token"));
 

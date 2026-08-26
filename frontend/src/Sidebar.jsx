@@ -67,6 +67,7 @@ export default function Sidebar() {
       return;
     }
 
+    setSidebar(false);
     setNewChat(true);
     setPrompt("");
     setReply(null);
