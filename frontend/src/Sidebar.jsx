@@ -33,7 +33,7 @@ export default function Sidebar() {
     try {
       const token = localStorage.getItem("token");
 
-      const response = await fetch("http://localhost:3000/chat/thread", {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/chat/thread`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -81,7 +81,7 @@ export default function Sidebar() {
     try {
       const token = localStorage.getItem("token");
 
-      let res = await fetch(`http://localhost:3000/chat/thread/${threadId}`, {
+      let res = await fetch(`${import.meta.env.VITE_API_URL}/chat/thread/${threadId}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -105,7 +105,7 @@ export default function Sidebar() {
     try {
       const token = localStorage.getItem("token");
 
-      let resp = await fetch(`http://localhost:3000/chat/thread/${threadId}`, {
+      let resp = await fetch(`${import.meta.env.VITE_API_URL}/chat/thread/${threadId}`, {
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${token}`,

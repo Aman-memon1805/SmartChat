@@ -22,7 +22,8 @@ export default function AuthModal() {
     e.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:3000/auth/signup", {
+      console.log("API URL:", import.meta.env.VITE_API_URL);
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/auth/signup`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -59,7 +60,7 @@ export default function AuthModal() {
     e.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:3000/auth/login", {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/auth/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -68,6 +69,8 @@ export default function AuthModal() {
       });
 
       const data = await response.json();
+
+      console.log("Login response:", data);
 
       if (!response.ok) {
         toast.error(data.message || "Login failed");

@@ -54,7 +54,7 @@ export default function ChatWindow() {
       }),
     };
 
-    let resp = await fetch("http://localhost:3000/chat/chat", options);
+    let resp = await fetch(`${import.meta.env.VITE_API_URL}/chat/chat`, options);
 
     if (!resp.ok) {
       setLoading(false);
