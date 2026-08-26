@@ -1,0 +1,445 @@
+.newChatText {
+    font-size: xx-large;
+    text-align: center;
+}
+
+
+/* =========================
+   CHAT CONTAINER
+========================= */
+
+.chats {
+    max-width: 700px;
+    width: 100%;
+    overflow-y: auto;
+    padding: 2rem;
+    box-sizing: border-box;
+
+    overflow-wrap: break-word;
+}
+
+
+/* =========================
+   USER MESSAGE
+========================= */
+
+.userDiv {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem 0;
+}
+
+.userMessage {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+    padding: 10px 20px;
+
+    background-color: #323232;
+    color: #ECECEC;
+
+    border-radius: 1rem;
+
+    max-width: 500px;
+    width: fit-content;
+
+    line-height: 1.6;
+
+    overflow-wrap: anywhere;
+}
+
+
+/* =========================
+   GPT MESSAGE
+========================= */
+
+.gptDiv {
+    text-align: left;
+    font-size: 0.9rem;
+
+    width: 100%;
+}
+
+.gptMessage {
+    color: #ECECEC;
+
+    line-height: 1.7;
+    font-size: 1rem;
+
+    max-width: 100%;
+    min-width: 0;
+
+    overflow-wrap: break-word;
+}
+
+
+/* =========================
+   MARKDOWN PARAGRAPHS
+========================= */
+
+.gptMessage p {
+    margin: 0 0 1rem;
+}
+
+.gptMessage p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================
+   HEADINGS
+========================= */
+
+.gptMessage h1,
+.gptMessage h2,
+.gptMessage h3,
+.gptMessage h4,
+.gptMessage h5,
+.gptMessage h6 {
+    color: #ffffff;
+
+    line-height: 1.35;
+
+    margin-top: 1.4rem;
+    margin-bottom: 0.7rem;
+}
+
+.gptMessage h1 {
+    font-size: 1.7rem;
+}
+
+.gptMessage h2 {
+    font-size: 1.4rem;
+}
+
+.gptMessage h3 {
+    font-size: 1.2rem;
+}
+
+.gptMessage h4,
+.gptMessage h5,
+.gptMessage h6 {
+    font-size: 1rem;
+}
+
+
+/* =========================
+   BOLD / ITALIC
+========================= */
+
+.gptMessage strong {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.gptMessage em {
+    font-style: italic;
+}
+
+
+/* =========================
+   LISTS
+========================= */
+
+.gptMessage ul,
+.gptMessage ol {
+    margin-top: 0.6rem;
+    margin-bottom: 1rem;
+
+    padding-left: 1.6rem;
+}
+
+.gptMessage li {
+    margin: 0.35rem 0;
+
+    padding-left: 0.2rem;
+}
+
+.gptMessage li > p {
+    margin-bottom: 0.4rem;
+}
+
+
+/* =========================
+   BLOCKQUOTE
+========================= */
+
+.gptMessage blockquote {
+    margin: 1rem 0;
+
+    padding: 0.5rem 1rem;
+
+    border-left: 3px solid #666;
+
+    color: rgba(255, 255, 255, 0.7);
+
+    background-color: rgba(255, 255, 255, 0.03);
+}
+
+
+/* =========================
+   INLINE CODE
+========================= */
+
+.gptMessage :not(pre) > code {
+    background-color: rgba(255, 255, 255, 0.08);
+
+    padding: 0.2rem 0.4rem;
+
+    border-radius: 0.3rem;
+
+    font-family: "Fira Code", "Consolas", monospace;
+
+    font-size: 0.88em;
+
+    overflow-wrap: anywhere;
+}
+
+
+/* =========================
+   CODE BLOCK
+========================= */
+
+.gptMessage pre {
+    background-color: #171717;
+
+    padding: 1rem;
+
+    margin: 1rem 0;
+
+    border-radius: 0.8rem;
+
+    max-width: 100%;
+
+    overflow-x: auto;
+
+    box-sizing: border-box;
+
+    white-space: pre;
+}
+
+
+/* Highlight.js */
+
+.gptMessage pre code {
+    background: transparent;
+
+    padding: 0;
+
+    font-family: "Fira Code", "Consolas", monospace;
+
+    font-size: 0.85rem;
+
+    line-height: 1.6;
+}
+
+
+/* Your existing highlight.js styling */
+
+.hljs {
+    border-radius: 0.8rem;
+}
+
+
+/* =========================
+   TABLES
+========================= */
+
+.gptMessage table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    margin: 1rem 0;
+
+    display: block;
+
+    overflow-x: auto;
+}
+
+.gptMessage th,
+.gptMessage td {
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    padding: 0.6rem 0.8rem;
+
+    text-align: left;
+
+    white-space: nowrap;
+}
+
+.gptMessage th {
+    background-color: rgba(255, 255, 255, 0.06);
+
+    color: #ffffff;
+
+    font-weight: 600;
+}
+
+.gptMessage tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.025);
+}
+
+
+/* =========================
+   LINKS
+========================= */
+
+.gptMessage a {
+    color: #60a5fa;
+
+    text-decoration: none;
+
+    overflow-wrap: anywhere;
+}
+
+.gptMessage a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================
+   IMAGES
+========================= */
+
+.gptMessage img {
+    max-width: 100%;
+
+    height: auto;
+
+    border-radius: 0.7rem;
+
+    margin: 0.5rem 0;
+}
+
+
+/* =========================
+   HORIZONTAL RULE
+========================= */
+
+.gptMessage hr {
+    border: none;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+
+    margin: 1.5rem 0;
+}
+
+
+/* =========================
+   CHAT SCROLLBAR
+========================= */
+
+.chats::-webkit-scrollbar {
+    width: 6px;
+}
+
+.chats::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.chats::-webkit-scrollbar-thumb {
+    background: #4b4b4ba8;
+
+    border-radius: 20px;
+}
+
+.chats::-webkit-scrollbar-thumb:hover {
+    background: #666;
+}
+
+
+/* =========================
+   ERROR MESSAGE
+========================= */
+
+.chatError {
+    color: #f87171;
+
+    background-color: rgba(248, 113, 113, 0.08);
+
+    border: 1px solid rgba(248, 113, 113, 0.15);
+
+    padding: 0.7rem 1rem;
+
+    border-radius: 0.6rem;
+
+    margin: 0.8rem 0;
+
+    font-size: 0.9rem;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 992px) {
+
+    .chats {
+        max-width: 700px;
+
+        padding: 2.5rem;
+    }
+
+    .userMessage {
+        max-width: 75%;
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 450px) {
+
+    .chats {
+        width: 100%;
+
+        padding: 1rem;
+    }
+
+    .newChatText {
+        font-size: 1.7rem;
+
+        padding: 0 1rem;
+    }
+
+    .userDiv {
+        padding: 0.5rem 0;
+    }
+
+    .userMessage {
+        padding: 0.75rem 1rem;
+
+        max-width: 90%;
+
+        font-size: 0.9rem;
+    }
+
+    .gptMessage {
+        font-size: 0.9rem;
+
+        line-height: 1.65;
+    }
+
+    .gptMessage pre {
+        padding: 0.8rem;
+
+        border-radius: 0.6rem;
+    }
+
+    .gptMessage pre code {
+        font-size: 0.78rem;
+    }
+
+    .gptMessage table {
+        font-size: 0.8rem;
+    }
+
+    .gptMessage th,
+    .gptMessage td {
+        padding: 0.5rem 0.6rem;
+    }
+}
